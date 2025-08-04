@@ -14,7 +14,7 @@ dotenv.config({ path: "./Confiq/Config.env" });
 app.use(
   cors({
     origin: [process.env.FRONTEND_URL], // example: http://localhost:3000
-    methods: ["POST"],
+    methods: ["POST","GET","PUT","DELETE","PATCH"],
     credentials: true,
   })
 );

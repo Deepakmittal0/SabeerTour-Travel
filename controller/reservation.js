@@ -6,7 +6,7 @@ export const sendReservation = async (req, res, next) => {
   console.log("✅ Route hit successfully");
   console.log("Form Data:", req.body);
 
-  const { firstName,  phone,message} = req.body;
+  const { firstName,  phone,message} = req.body||{};
 
   if (!firstName || !phone || !message) {
     return next(new ErrorHandler("Please fill the full reservation form", 400));
